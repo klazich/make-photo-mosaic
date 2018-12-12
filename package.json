@@ -1,0 +1,10 @@
+{
+  "name": "sarah-mosaic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kevin Lazich",
+  "license": "MIT",
+  "dependencies": {
+    "mosaic-node-generator": "^1.1.5"
+  }
+}
