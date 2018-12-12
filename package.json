@@ -5,7 +5,8 @@
   "author": "Kevin Lazich",
   "license": "MIT",
   "dependencies": {
-    "mosaic-node-generator": "^1.1.5"
+    "mosaic-node-generator": "^1.1.5",
+    "sharp": "^0.21.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
