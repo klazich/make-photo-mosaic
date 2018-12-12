@@ -6,5 +6,15 @@
   "license": "MIT",
   "dependencies": {
     "mosaic-node-generator": "^1.1.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0"
+  },
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,jsx,json,css,md}\"",
+    "start": "babel-node index.js"
   }
 }
