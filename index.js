@@ -4,41 +4,26 @@ import { mosaic } from 'mosaic-node-generator'
 import fs from 'fs-extra'
 import sharp from 'sharp'
 
+import makeTiles from './makeTiles'
+
 const inputImagePath = join(__dirname, 'input.jpg')
-const imagesDirectory = join(__dirname, 'images')
 const tilesDirectory = join(__dirname, 'tiles')
+const target = 'target.jpg'
 
 try {
   sharp(inputImagePath)
     .normalize()
     .sharpen()
-    .toFile('target.jpg')
+    .toFile(target)
 } catch (err) {
   console.error(err)
 }
 
-// try {
-//   fs.readdirSync(imagesDirectory)
-//     .map(f => join(imagesDirectory, f))
-//     .forEach(f =>
-//       sharp(f)
-//         .normalize()
-//         .resize({
-//           width: 200,
-//           height: 200,
-//           fit: sharp.fit.cover,
-//           position: sharp.strategy.entropy,
-//         })
-//         .sharpen()
-//         .toFile(join(tilesDirectory, parse(f).base))
-//     )
-// } catch (err) {
-//   console.error(err)
-// }
+// makeTiles(inputImagePath, tilesDirectory)
 
 const options = {
-  inputImagePath,
-  tilesDirectory,
+  inputImagePath: inputImagePath,
+  tilesDirectory: tilesDirectory,
   cellWidth: 50,
   cellHeight: 50,
   columns: 100,
