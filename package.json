@@ -5,6 +5,7 @@
   "author": "Kevin Lazich",
   "license": "MIT",
   "dependencies": {
+    "fs-extra": "^7.0.1",
     "mosaic-node-generator": "^1.1.5",
     "sharp": "^0.21.0"
   },
